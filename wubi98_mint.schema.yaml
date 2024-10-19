@@ -149,7 +149,7 @@ rime_mint:
   dictionary: rime_mint
   enable_user_dict: false
   enable_completion: false
-  prefix: "Z"
+  prefix: "z"
   tips: 〔拼音〕
 
 # 反查设置
@@ -187,10 +187,10 @@ punctuator:
 recognizer:
   import_preset: default
   patterns:
+    rime_mint: "^z[a-z]*'?$"
     url: "^[a-z]+[.].+$"
     punct: "^/([0-9]0?|[a-zA-Z]+)$"
     email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
-    rime_mint: "^Z[a-z]*'?$"
     rmb: "^R[0-9]+[.]?[0-9]*"        # 响应 lua_translator@number_translator 脚本将自动获取第 2 个字符作为触发前缀
     gregorian_to_lunar: "^N[0-9]{1,8}"  # 响应 lua_translator@Chinese_lunar_calendar 公历转农历，输入 N20240115 得到「二〇二四年腊月初五」，脚本将自动获取第 2 个字符作为触发前缀
     uppercase: ""  # 覆写默认的 uppercase 使其可以在输入大写后，输入数字
